@@ -1,0 +1,194 @@
+
+        body {
+            text-align: center;
+        }
+
+        div {
+            user-select: none;
+        }
+
+        #pencere {
+            height: 500px;
+            width: 500px;
+            margin-right: auto;
+            margin-left: auto;
+            font-family: 'Times New Roman', Times, serif;
+            font-style: oblique;
+            color: black;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            background-image: url('https://web.archive.org/web/20210319180032im_/https://lh3.googleusercontent.com/-HkmAlHNABmU/XKpEIFNbfnI/AAAAAAAAAmk/Az9OV6RX6ZQrnp0drgWtEfxnvSszYB-3gCEwYBhgL/w140-h140-p/bg.png');
+            background-repeat: repeat;
+            padding: 20px 20px 20px 20px;
+
+            border-radius: 5px;
+        }
+
+        #sayitablosu {
+            align-self: center;
+            border-spacing: 10px;
+        }
+
+        .kutular {
+            border: 2px inset gray;
+
+
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .yankutular {
+            border: 2px inset black;
+
+
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        #yerdiv {
+            border: 2px inset gold;
+
+
+            border-radius: 5px;
+            position: relative;
+        }
+
+        #yerdivic {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+        }
+
+        #eldiv {
+            border: 2px inset gold;
+
+
+            border-radius: 5px;
+            position: relative;
+        }
+
+        #eldivic {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+        }
+
+        #tamekran {
+
+            /* IE 9 */
+
+            /* Safari 3-8 */
+            transform: rotate(90deg);
+        }
+
+        #notdefteri {
+            height: 500px;
+            width: 500px;
+            margin-right: auto;
+            margin-left: auto;
+            font-family: 'Times New Roman', Times, serif;
+            font-style: oblique;
+            color: black;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            background-repeat: repeat;
+            padding: 20px 20px 20px 20px;
+            border-radius: 5px;
+
+        }
+
+        #sayitablosund {
+            align-self: center;
+            border-spacing: 10px;
+        }
+
+        .kutularnd {
+            border: 2px inset gray;
+
+
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .yankutularnd {
+
+
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        #yerdivnd {
+            border: 2px inset gold;
+
+
+            border-radius: 5px;
+            position: relative;
+        }
+
+        #yerdivicnd {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+        }
+
+        .besvy {
+            border: 2px inset gold;
+
+
+            border-radius: 5px;
+            position: relative;
+        }
+
+        #tamekrnd {
+
+            /* IE 9 */
+
+            /* Safari 3-8 */
+            transform: rotate(90deg);
+        }
+
+        #div31 {
+            width: 460px;
+            margin-right: auto;
+            margin-left: auto;
+            font-size: 21px;
+            display: block;
+            border: 3px green solid;
+            text-align: left;
+            padding: 20px 20px 20px 20px;
+
+
+            border-radius: 5px;
+
+            box-shadow: 0 0 6px 4px black;
+            margin-top: 40px;
+            margin-bottom: 40px;
+            font-style: arial;
+            color: black;
+        }
+
+        .krlyklntdftr {
+            height: 120px;
+            width: 500px;
+            color: white;
+            background-size: 100% 100%;
+            text-align: right;
+            margin-top: 100px;
+            margin-bottom: 50px;
+            position: relative;
+            margin-right: auto;
+            margin-left: auto;
+
+
+            border-radius: 5px;
+
+        }
+
+        #resmkrlykl {
+
+
+            border-radius: 5px;
+
+        }

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kart Oyunu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1a3c34, #2e6b5b);
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            user-select: none;
+        }
+
+        /* Header */
+        header {
+            background: #214d40;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            font-style: oblique;
+            color: #ffd700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Navbar */
+        nav {
+            background: #2e6b5b;
+            padding: 15px 0;
+            margin-bottom: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2em;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        nav ul li a:hover {
+            background: #63a228;
+        }
+
+        /* Game Container */
+        #game-container {
+            background: #ffffff1a;
+            border: 3px solid #63a228;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 1200px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        #pencere, #notdefteri {
+            height: 600px;
+            width: 550px;
+            background-image: url('https://web.archive.org/web/20210319180032im_/https://lh3.googleusercontent.com/-HkmAlHNABmU/XKpEIFNbfnI/AAAAAAAAAmk/Az9OV6RX6ZQrnp0drgWtEfxnvSszYB-3gCEwYBhgL/w140-h140-p/bg.png');
+            background-repeat: repeat;
+            padding: 15px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+        }
+
+        #sayitablosu, #sayitablosund {
+            border-spacing: 8px;
+            align-self: center;
+        }
+
+        .kutular, .kutularnd {
+            border: 2px inset gray;
+            border-radius: 8px;
+            text-align: center;
+            color: #fff;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            background-color: #214d40;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            min-width: 60px;
+            min-height: 60px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .kutular:hover, .kutularnd:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .yankutular, .yankutularnd {
+            border: 2px inset black;
+            border-radius: 8px;
+            text-align: center;
+            color: #fff;
+            background-color: #2e6b5b;
+        }
+
+        .kartsayisi, .kartsayisind {
+            border: 2px inset gold;
+            border-radius: 8px;
+            position: relative;
+            display: inline-block;
+            margin: 5px;
+            color: #fff;
+            padding: 5px;
+            min-width: 40px;
+            min-height: 40px;
+            font-size: 20px;
+        }
+
+        .kartsayisic, .kartsayisicnd {
+            position: absolute;
+            top: 2px;
+            right: 2px;
+            font-size: 12px;
+            color: #ffd700;
+        }
+
+        .besvy {
+            border: 2px inset gold;
+            border-radius: 8px;
+            position: relative;
+            display: inline-block;
+            padding: 8px;
+            color: #fff;
+            cursor: pointer;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        #tamekran, #tamekrnd {
+            transform: rotate(90deg);
+            font-size: 20px;
+        }
+
+        #oyunpuan {
+            font-size: 28px;
+            font-weight: bold;
+            color: #ffd700;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        #besalarm {
+            color: #fff;
+            font-weight: bold;
+            background-color: red;
+            padding: 5px;
+            border-radius: 5px;
+            font-size: 20px;
+        }
+
+        #yenioyun, #yenioyund {
+            cursor: pointer;
+            font-size: 24px;
+        }
+
+        #bronzodl, #gumusodl, #altinodl {
+            display: inline-block;
+        }
+
+        #bulunans, #aranans {
+            color: #fff;
+            font-weight: bold;
+            border: 2px inset red;
+            padding: 5px;
+            border-radius: 5px;
+            font-size: 20px;
+        }
+
+        /* Footer */
+        footer {
+            background: #214d40;
+            padding: 15px;
+            margin-top: auto;
+            text-align: center;
+            font-size: 0.9em;
+        }
+
+        footer p {
+            color: #ccc;
+        }
+
+        footer a {
+            color: #63a228;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            #game-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            #pencere, #notdefteri {
+                width: 90%;
+                height: 500px;
+            }
+
+            .kutular, .kutularnd {
+                min-width: 50px;
+                min-height: 50px;
+                font-size: 20px;
+            }
+
+            .kartsayisi, .kartsayisind {
+                min-width: 35px;
+                min-height: 35px;
+                font-size: 18px;
+            }
+
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Kralı Yakala Event Yardımcısı</h1>
+    </header>
+    <nav>
+    </nav>
+    <div id="game-container">
+        <div id="pencere" style="display: none;">
+            <table id="sayitablosu"></table>
+        </div>
+        <div id="notdefteri">
+            <table id="sayitablosund"></table>
+        </div>
+    </div>
+    <footer>
+        <p>samet abi cok guzel site yapmis</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
